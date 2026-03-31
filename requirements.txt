@@ -1,0 +1,16 @@
+# Core models
+pydantic>=2.0.0
+
+# OpenEnv API
+fastapi
+uvicorn
+httpx
+
+# Baseline inference
+openai
+
+# Testing
+pytest
+
+# OpenEnv CLI
+openenv
