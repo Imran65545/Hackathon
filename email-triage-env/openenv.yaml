@@ -1,0 +1,37 @@
+name: "Email Triage Environment"
+version: "1.0.0"
+description: "A real-world AI training and evaluation environment where an AI agent learns to triage emails like a human would in a workplace. The agent must prioritize, categorize, and draft replies to incoming emails."
+author: "Hackathon Team"
+
+tasks:
+  - id: 1
+    name: "Easy: Priority Sorting"
+    description: "The agent is shown one email at a time and must label each email as: 'urgent', 'normal', or 'low'. Score 1.0 if correct."
+  
+  - id: 2
+    name: "Medium: Full Categorization"
+    description: "The agent must label priority ('urgent', 'normal', 'low') AND assign a department ('HR', 'Sales', 'Tech', 'Billing', 'Other'). Score is evenly weighted."
+  
+  - id: 3
+    name: "Hard: Full Triage + Reply Draft"
+    description: "The agent must label priority + category + write a one-line professional reply. Reply is graded by relevance, professionalism, and brevity."
+
+observation_space:
+  type: "dict"
+  schema:
+    email_id: "str"
+    subject: "str"
+    body: "str"
+    sender: "str"
+    timestamp: "str"
+    task_id: "int"
+
+action_space:
+  type: "dict"
+  schema:
+    email_id: "str"
+    priority: "str"
+    category: "str"
+    reply_draft: "str"
+
+reward_range: [0.0, 1.0]

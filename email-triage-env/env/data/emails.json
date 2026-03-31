@@ -1,0 +1,602 @@
+[
+  {
+    "email_id": "e001",
+    "subject": "CRITICAL: Database 04 unreachable",
+    "body": "Hey team, the primary production database DB-04 has been down for the last 5 minutes. Customers are starting to report 500 errors on the checkout page. Needs immediate attention.",
+    "sender": "oncall-alerts@company.com",
+    "timestamp": "2024-01-15T09:30:00",
+    "ground_truth": {
+      "priority": "urgent",
+      "category": "Tech",
+      "ideal_reply": "We are actively investigating the DB-04 outage and will provide an update shortly."
+    }
+  },
+  {
+    "email_id": "e002",
+    "subject": "Data Breach Notification - URGENT",
+    "body": "Security team: we just detected a massive spike in unauthorized login attempts bypassing 2FA on our admin portal. Some internal data might have been compromised. Please review the logs ASAP.",
+    "sender": "security-monitor@company.com",
+    "timestamp": "2024-01-15T10:15:00",
+    "ground_truth": {
+      "priority": "urgent",
+      "category": "Tech",
+      "ideal_reply": "Incident response protocol initiated. We are locking down the admin portal now."
+    }
+  },
+  {
+    "email_id": "e003",
+    "subject": "URGENT: Bug in payment gateway",
+    "body": "Hi Tech, users are being double-charged when clicking the 'Buy Now' button rapidly. We've had 40 complaints in the last hour. Can someone hotfix this?",
+    "sender": "support-escalations@company.com",
+    "timestamp": "2024-01-15T11:05:00",
+    "ground_truth": {
+      "priority": "urgent",
+      "category": "Tech",
+      "ideal_reply": "We are rolling out an emergency patch to disable rapid clicks on the checkout route."
+    }
+  },
+  {
+    "email_id": "e004",
+    "subject": "API Rate limit exceeded globally",
+    "body": "All our microservices are returning 429 Too Many Requests. It looks like our upstream provider changed our tier. Please look into this immediately or nothing will load.",
+    "sender": "devops@company.com",
+    "timestamp": "2024-01-15T12:00:00",
+    "ground_truth": {
+      "priority": "urgent",
+      "category": "Tech",
+      "ideal_reply": "I am contacting the provider right now to resolve the rate limiting issue."
+    }
+  },
+  {
+    "email_id": "e005",
+    "subject": "Site is completely down",
+    "body": "The main landing page is just showing a blank white screen. We have a marketing campaign running right now, so we are losing money. Fix it!",
+    "sender": "cmo@company.com",
+    "timestamp": "2024-01-15T13:45:00",
+    "ground_truth": {
+      "priority": "urgent",
+      "category": "Tech",
+      "ideal_reply": "We have identified the frontend crash and are reverting to the previous stable build immediately."
+    }
+  },
+  {
+    "email_id": "e006",
+    "subject": "Feature Request: Dark Mode",
+    "body": "Hello tech team, several clients have requested a dark mode toggle for the analytics dashboard. Is this something we could add to the roadmap for Q3?",
+    "sender": "product-manager@company.com",
+    "timestamp": "2024-01-16T09:00:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "Tech",
+      "ideal_reply": "Thanks! I have added the dark mode request to our Q3 product backlog for review."
+    }
+  },
+  {
+    "email_id": "e007",
+    "subject": "Code Review: PR #4052",
+    "body": "Could someone take a look at my pull request for the new caching layer? It's been open for two days. I just pushed a few minor tests.",
+    "sender": "junior-dev@company.com",
+    "timestamp": "2024-01-16T09:30:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "Tech",
+      "ideal_reply": "I will review your pull request this afternoon."
+    }
+  },
+  {
+    "email_id": "e008",
+    "subject": "Deployment Scheduled for Tonight",
+    "body": "Just a heads up, we are deploying v2.4 tonight at 2 AM EST. Expect a brief 5-minute downtime. Let me know if you need to postpone.",
+    "sender": "release-mgr@company.com",
+    "timestamp": "2024-01-16T14:00:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "Tech",
+      "ideal_reply": "Noted. The deployment window looks clear on our end."
+    }
+  },
+  {
+    "email_id": "e009",
+    "subject": "Staging environment is slow",
+    "body": "The staging server seems unusually slow today. Takes 10 seconds to load the login page. Can someone clear the cache or restart the pods?",
+    "sender": "qa-tester@company.com",
+    "timestamp": "2024-01-17T11:20:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "Tech",
+      "ideal_reply": "I will restart the staging pods and clear the cache now."
+    }
+  },
+  {
+    "email_id": "e010",
+    "subject": "Deprecation warning on Node.js library",
+    "body": "We're using an outdated version of lodash in the legacy portal that's throwing deprecation warnings. We should schedule an update soon.",
+    "sender": "security-scanner@company.com",
+    "timestamp": "2024-01-17T15:00:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "Tech",
+      "ideal_reply": "I will create a ticket to update the vulnerable packages in the next sprint."
+    }
+  },
+  {
+    "email_id": "e011",
+    "subject": "Question about new PTO policy",
+    "body": "Hi HR, I read the new handbook but I'm still confused about how rollover days work for PTO. Do they expire in March or June?",
+    "sender": "employee12@company.com",
+    "timestamp": "2024-01-18T10:00:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "HR",
+      "ideal_reply": "Rollover PTO days officially expire at the end of June. Let me know if you have other questions!"
+    }
+  },
+  {
+    "email_id": "e012",
+    "subject": "URGENT: Payroll did not process",
+    "body": "Hello, my paycheck did not hit my bank account today like it normally does. My rent is due, please resolve this as soon as possible!",
+    "sender": "employee45@company.com",
+    "timestamp": "2024-01-18T08:30:00",
+    "ground_truth": {
+      "priority": "urgent",
+      "category": "HR",
+      "ideal_reply": "I am looking into this immediately with our payroll provider to get your deposit pushed through."
+    }
+  },
+  {
+    "email_id": "e013",
+    "subject": "New Hire Onboarding: Sarah Jenkins",
+    "body": "Sarah starts on Monday as a Senior Designer. Please ensure her laptop is ready and she is added to all the relevant Slack channels.",
+    "sender": "design-manager@company.com",
+    "timestamp": "2024-01-18T11:45:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "HR",
+      "ideal_reply": "We will have Sarah's equipment and accounts ready by Monday morning."
+    }
+  },
+  {
+    "email_id": "e014",
+    "subject": "Formal Complaint regarding team meeting",
+    "body": "I would like to file a confidential complaint regarding inappropriate comments made during the Q1 planning meeting. How do I proceed?",
+    "sender": "anonymous.employee@company.com",
+    "timestamp": "2024-01-19T14:15:00",
+    "ground_truth": {
+      "priority": "urgent",
+      "category": "HR",
+      "ideal_reply": "Thank you for reaching out. Please send me some times when we can meet privately to discuss this."
+    }
+  },
+  {
+    "email_id": "e015",
+    "subject": "Leave Request: Medical",
+    "body": "I need to take 3 weeks of medical leave starting next month for a scheduled surgery. Attached are the doctors' notes.",
+    "sender": "employee89@company.com",
+    "timestamp": "2024-01-19T16:00:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "HR",
+      "ideal_reply": "Your medical leave has been approved. Please let us know if you need accommodations when you return."
+    }
+  },
+  {
+    "email_id": "e016",
+    "subject": "Performance Review Schedule",
+    "body": "When do the annual performance reviews kick off this year? I have a couple of team members who are asking about promotions.",
+    "sender": "engineering-lead@company.com",
+    "timestamp": "2024-01-20T09:30:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "HR",
+      "ideal_reply": "Annual performance reviews will begin the first week of February. I'll send out the forms next week."
+    }
+  },
+  {
+    "email_id": "e017",
+    "subject": "New Inbound Lead: Acme Corp",
+    "body": "We just got a massive enterprise lead from Acme Corp via the website. Seems like a perfect fit for the enterprise tier. Who wants to take this?",
+    "sender": "website-forms@company.com",
+    "timestamp": "2024-01-22T08:00:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "Sales",
+      "ideal_reply": "I will assign this lead to our enterprise account executive team immediately."
+    }
+  },
+  {
+    "email_id": "e018",
+    "subject": "Demo requested for tomorrow",
+    "body": "A potential client from Europe wants a platform demo tomorrow at 9 AM CET. Can someone be available to run through the presentation?",
+    "sender": "sdr-team@company.com",
+    "timestamp": "2024-01-22T10:15:00",
+    "ground_truth": {
+      "priority": "urgent",
+      "category": "Sales",
+      "ideal_reply": "I'll schedule a sales engineer to handle the demo at 9 AM CET tomorrow."
+    }
+  },
+  {
+    "email_id": "e019",
+    "subject": "Contract Renewal: Globex",
+    "body": "Globex is up for renewal next month. They've been complaining about API stability though, so we might need to offer a discount to save the account.",
+    "sender": "account-manager1@company.com",
+    "timestamp": "2024-01-22T13:30:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "Sales",
+      "ideal_reply": "Let's schedule a call to review their usage data before negotiating the renewal discount."
+    }
+  },
+  {
+    "email_id": "e020",
+    "subject": "Following up on my proposal",
+    "body": "Hi there, I sent over the signed MSA last week but haven't received the final executed copy. Just checking if you need anything else from us.",
+    "sender": "client-procurement@client.com",
+    "timestamp": "2024-01-23T09:00:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "Sales",
+      "ideal_reply": "We are reviewing the signed MSA and will return the executed copy by end of business today."
+    }
+  },
+  {
+    "email_id": "e021",
+    "subject": "URGENT: Client wants to churn",
+    "body": "Their CTO just emailed saying they are moving to our competitor by Friday unless we can match their enterprise pricing. We need leadership sign-off right now.",
+    "sender": "senior-ae@company.com",
+    "timestamp": "2024-01-23T10:45:00",
+    "ground_truth": {
+      "priority": "urgent",
+      "category": "Sales",
+      "ideal_reply": "I am escalating this to the VP of Sales immediately for pricing approval."
+    }
+  },
+  {
+    "email_id": "e022",
+    "subject": "Sales Kickoff Deck Missing Slides",
+    "body": "The Q1 Sales Kickoff is tomorrow, but the master deck is still missing the competitive analysis slides. Please upload them to the shared folder.",
+    "sender": "sales-enablement@company.com",
+    "timestamp": "2024-01-23T15:00:00",
+    "ground_truth": {
+      "priority": "urgent",
+      "category": "Sales",
+      "ideal_reply": "I am finalizing the competitive analysis slides now and will upload them shortly."
+    }
+  },
+  {
+    "email_id": "e023",
+    "subject": "Wrong amount on invoice #8892",
+    "body": "You billed us for 50 licenses this month, but we downgraded to 30 last month. Can you please correct the invoice and resend it?",
+    "sender": "finance@client.com",
+    "timestamp": "2024-01-24T09:30:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "Billing",
+      "ideal_reply": "Apologies for the error. I have issued a corrected invoice reflecting the downgrade."
+    }
+  },
+  {
+    "email_id": "e024",
+    "subject": "Payment Failed Notification",
+    "body": "Your credit card ending in 4421 was declined for the monthly AWS subscription. Please update your payment method to avoid service interruption.",
+    "sender": "billing-alerts@aws.amazon.com",
+    "timestamp": "2024-01-24T11:15:00",
+    "ground_truth": {
+      "priority": "urgent",
+      "category": "Billing",
+      "ideal_reply": "I will update the corporate card details in AWS immediately to prevent downtime."
+    }
+  },
+  {
+    "email_id": "e025",
+    "subject": "Requesting Refund",
+    "body": "I accidentally purchased the annual subscription instead of the monthly one. Can I get a refund of the difference?",
+    "sender": "customer99@mail.com",
+    "timestamp": "2024-01-24T14:00:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "Billing",
+      "ideal_reply": "I have processed the refund for the difference and switched you to the monthly plan."
+    }
+  },
+  {
+    "email_id": "e026",
+    "subject": "Where do I send the wire transfer?",
+    "body": "Our bank requires routing numbers for standard ACH rather than wire. Do you have cross-border routing details available?",
+    "sender": "international-client@overseas.com",
+    "timestamp": "2024-01-25T08:30:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "Billing",
+      "ideal_reply": "I will send over our international banking instructions and Swift code."
+    }
+  },
+  {
+    "email_id": "e027",
+    "subject": "Missing W-9 Form",
+    "body": "To process your latest vendor payment, we need an updated W-9. The old one we have on file is from 2021.",
+    "sender": "accounts-payable@partner.com",
+    "timestamp": "2024-01-25T10:00:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "Billing",
+      "ideal_reply": "I have attached our updated W-9 form to this email for your records."
+    }
+  },
+  {
+    "email_id": "e028",
+    "subject": "Company Newsletter - January Edition",
+    "body": "Welcome to the new year! Check out our highlights from Q4, including our expanded benefits program, some pictures from the holiday party, and a message from the CEO.",
+    "sender": "internal-comms@company.com",
+    "timestamp": "2024-01-26T09:00:00",
+    "ground_truth": {
+      "priority": "low",
+      "category": "Other",
+      "ideal_reply": "Looks great, thanks for sharing!"
+    }
+  },
+  {
+    "email_id": "e029",
+    "subject": "Join our free webinar on AI Automation",
+    "body": "Discover how the latest AI tools can increase your team's productivity by 40%. Register today for our free session taking place next Tuesday.",
+    "sender": "marketing@saas-vendor.com",
+    "timestamp": "2024-01-26T11:30:00",
+    "ground_truth": {
+      "priority": "low",
+      "category": "Other",
+      "ideal_reply": "Thanks for the invitation, but I am unable to attend this webinar."
+    }
+  },
+  {
+    "email_id": "e030",
+    "subject": "Donuts in the breakroom!",
+    "body": "Hey everyone, someone brought a huge box of donuts to the 3rd floor kitchenette. First come, first served!",
+    "sender": "office-manager@company.com",
+    "timestamp": "2024-01-26T14:15:00",
+    "ground_truth": {
+      "priority": "low",
+      "category": "Other",
+      "ideal_reply": "Thanks for the heads up, I'll grab one soon."
+    }
+  },
+  {
+    "email_id": "e031",
+    "subject": "Your software trial is expiring...",
+    "body": "Hurry! You only have 3 days left on your premium trial. Upgrade now and save 15% with promo code SAVE15.",
+    "sender": "sales@random-tool.com",
+    "timestamp": "2024-01-27T08:00:00",
+    "ground_truth": {
+      "priority": "low",
+      "category": "Other",
+      "ideal_reply": "We will not be upgrading at this time. Please cancel the trial."
+    }
+  },
+  {
+    "email_id": "e032",
+    "subject": "Reminder: Timesheets due Friday",
+    "body": "Please remember to submit your timesheets by 5 PM this Friday so billing can process our client invoices on time.",
+    "sender": "operations@company.com",
+    "timestamp": "2024-01-27T10:30:00",
+    "ground_truth": {
+      "priority": "low",
+      "category": "Other",
+      "ideal_reply": "Thanks for the reminder. My timesheet is fully submitted."
+    }
+  },
+  {
+    "email_id": "e033",
+    "subject": "Office Building Scheduled Maintenance",
+    "body": "The property management team will be testing the fire alarms this Saturday between 9 AM and 11 AM. Please ignore the alarms if you are in the office.",
+    "sender": "facilities@building.com",
+    "timestamp": "2024-01-27T13:45:00",
+    "ground_truth": {
+      "priority": "low",
+      "category": "Other",
+      "ideal_reply": "Understood, thank you for the notice."
+    }
+  },
+  {
+    "email_id": "e034",
+    "subject": "Discount on Standing Desks for corporate partners",
+    "body": "As a partner company, get 20% off all standing desks this week only. Perfect for upgrading your home office setup.",
+    "sender": "promotions@office-furniture.com",
+    "timestamp": "2024-01-28T09:00:00",
+    "ground_truth": {
+      "priority": "low",
+      "category": "Other",
+      "ideal_reply": "No thank you, please unsubscribe me from these marketing emails."
+    }
+  },
+  {
+    "email_id": "e035",
+    "subject": "Happy Birthday from the team!",
+    "body": "Wishing you a fantastic birthday today! There is a card floating around the office, be sure to sign it.",
+    "sender": "culture-committee@company.com",
+    "timestamp": "2024-01-28T10:15:00",
+    "ground_truth": {
+      "priority": "low",
+      "category": "Other",
+      "ideal_reply": "Thank you so much for the birthday wishes!"
+    }
+  },
+  {
+    "email_id": "e036",
+    "subject": "Sales strategy draft",
+    "body": "Can you take a look at the attached strategy draft? I mainly need feedback on section 3 about target demographics.",
+    "sender": "vp-sales@company.com",
+    "timestamp": "2024-01-28T14:00:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "Sales",
+      "ideal_reply": "I will review the target demographic section and add my comments by tomorrow."
+    }
+  },
+  {
+    "email_id": "e037",
+    "subject": "Error code 403 on Dashboard",
+    "body": "When I try to login as an admin, it throws a 403 forbidden error. The permissions might be corrupt in the latest release.",
+    "sender": "admin-user@client.com",
+    "timestamp": "2024-01-29T08:30:00",
+    "ground_truth": {
+      "priority": "urgent",
+      "category": "Tech",
+      "ideal_reply": "I am investigating the permissions issue right now to restore admin access."
+    }
+  },
+  {
+    "email_id": "e038",
+    "subject": "URGENT: Missing benefits enrollment link",
+    "body": "Tomorrow is the deadline to enroll in health insurance and the link on the portal is broken. Help!",
+    "sender": "panicking-employee@company.com",
+    "timestamp": "2024-01-29T10:00:00",
+    "ground_truth": {
+      "priority": "urgent",
+      "category": "HR",
+      "ideal_reply": "I am fixing the portal link now and have extended the enrollment deadline by one day."
+    }
+  },
+  {
+    "email_id": "e039",
+    "subject": "Checking invoice status",
+    "body": "We sent invoice #39912 last week and just wanted to confirm you received it and that it is scheduled for payment.",
+    "sender": "vendor-finance@partner.com",
+    "timestamp": "2024-01-29T11:30:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "Billing",
+      "ideal_reply": "We have received the invoice and it is queued for payment in our next processing run."
+    }
+  },
+  {
+    "email_id": "e040",
+    "subject": "New policy on remote work equipment",
+    "body": "Effective next month, the company will reimburse up to $500 for a home office monitor. Details are attached.",
+    "sender": "hr-announcements@company.com",
+    "timestamp": "2024-01-29T14:45:00",
+    "ground_truth": {
+      "priority": "low",
+      "category": "HR",
+      "ideal_reply": "Thank you for the update on the remote equipment policy."
+    }
+  },
+  {
+    "email_id": "e041",
+    "subject": "Lunch and Learn: Next Thursday",
+    "body": "Join the engineering team next Thursday to learn about our new event-driven architecture. Pizza will be provided.",
+    "sender": "engineering-lead@company.com",
+    "timestamp": "2024-01-30T09:00:00",
+    "ground_truth": {
+      "priority": "low",
+      "category": "Other",
+      "ideal_reply": "I'll be there! Thanks for putting this together."
+    }
+  },
+  {
+    "email_id": "e042",
+    "subject": "Prospect asking for API limits",
+    "body": "I'm talking to a prospect who wants to know the exact call limits on the Pro plan vs the Enterprise plan. Where is this documented?",
+    "sender": "account-exec@company.com",
+    "timestamp": "2024-01-30T10:15:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "Sales",
+      "ideal_reply": "I'll send over the rate limit documentation outlining the tier differences."
+    }
+  },
+  {
+    "email_id": "e043",
+    "subject": "Critical Security Vulnerability CVE-2024-111",
+    "body": "Our scanner found a vulnerable dependency logging-lib v1.2. The exploit is currently in the wild. We need an emergency fix tonight.",
+    "sender": "security@company.com",
+    "timestamp": "2024-01-30T13:30:00",
+    "ground_truth": {
+      "priority": "urgent",
+      "category": "Tech",
+      "ideal_reply": "I am patching the dependency and deploying the hotfix immediately."
+    }
+  },
+  {
+    "email_id": "e044",
+    "subject": "Chargeback on account 9002",
+    "body": "A customer just initiated a chargeback for $1200 saying the transaction was fraudulent. We need to gather evidence to dispute it.",
+    "sender": "payment-processor@stripe.com",
+    "timestamp": "2024-01-31T08:00:00",
+    "ground_truth": {
+      "priority": "urgent",
+      "category": "Billing",
+      "ideal_reply": "I am gathering the access logs and contract details to dispute the chargeback."
+    }
+  },
+  {
+    "email_id": "e045",
+    "subject": "Please sign: Final offer letter",
+    "body": "Hi there, everything looks good to go. Please have the VP sign this countersigned offer letter so we can send it to the candidate.",
+    "sender": "recruiter@company.com",
+    "timestamp": "2024-01-31T09:30:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "HR",
+      "ideal_reply": "I will get the VP's signature on the offer letter right away."
+    }
+  },
+  {
+    "email_id": "e046",
+    "subject": "We'd love your feedback!",
+    "body": "How are you enjoying our tool? Please take a 2-minute survey to let us know. You might win a $5 coffee gift card.",
+    "sender": "feedback@b2b-software.com",
+    "timestamp": "2024-01-31T11:00:00",
+    "ground_truth": {
+      "priority": "low",
+      "category": "Other",
+      "ideal_reply": "I don't have time to fill out the survey right now, sorry."
+    }
+  },
+  {
+    "email_id": "e047",
+    "subject": "Out of Office: Going to Hawaii",
+    "body": "I will be OOO with no internet access this week. For anything urgent, please contact my manager.",
+    "sender": "colleague@company.com",
+    "timestamp": "2024-02-01T08:30:00",
+    "ground_truth": {
+      "priority": "low",
+      "category": "Other",
+      "ideal_reply": "Have a great trip!"
+    }
+  },
+  {
+    "email_id": "e048",
+    "subject": "Upsell opportunity: Expanding seats",
+    "body": "Vandelay Industries just added 30 more employees. We should reach out and upsell them on our enterprise site license.",
+    "sender": "sales-manager@company.com",
+    "timestamp": "2024-02-01T10:00:00",
+    "ground_truth": {
+      "priority": "normal",
+      "category": "Sales",
+      "ideal_reply": "I will reach out to Vandelay Industries to discuss upgrading their plan."
+    }
+  },
+  {
+    "email_id": "e049",
+    "subject": "Dispute over unbilled hours",
+    "body": "Your invoice lists 40 consulting hours, but our records show you only worked 35. Please amend the bill or provide timesheets.",
+    "sender": "accounts-payable@client.com",
+    "timestamp": "2024-02-01T13:15:00",
+    "ground_truth": {
+      "priority": "urgent",
+      "category": "Billing",
+      "ideal_reply": "I will provide the itemized timesheets to clarify the billed hours today."
+    }
+  },
+  {
+    "email_id": "e050",
+    "subject": "Action Required: Update your password",
+    "body": "For security reasons, your password will expire in 14 days. Click here to set a new password according to our new complex requirements.",
+    "sender": "IT-Support@company.com",
+    "timestamp": "2024-02-01T15:00:00",
+    "ground_truth": {
+      "priority": "low",
+      "category": "Tech",
+      "ideal_reply": "Thanks, I will update my password today."
+    }
+  }
+]
