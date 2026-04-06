@@ -14,3 +14,6 @@ pytest
 
 # OpenEnv CLI
 openenv
+
+# Environment Configuration
+python-dotenv
