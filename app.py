@@ -10,6 +10,11 @@ app = FastAPI(
     version="1.0.0"
 )
 
+@app.get("/")
+def root():
+    return {"status": "Email Triage API is running", "version": "1.0.0"}
+
+
 env = EmailTriageEnv(task_id=1)
 
 class ResetRequest(BaseModel):
