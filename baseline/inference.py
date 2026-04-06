@@ -8,6 +8,11 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from env.environment import EmailTriageEnv
 from env.models import TriageAction
 
+# Configuration
+API_BASE_URL = os.getenv("API_BASE_URL", "https://api.openai.com/v1")
+MODEL_NAME = os.getenv("MODEL_NAME", "gpt-3.5-turbo-1106")
+HF_TOKEN = os.getenv("HF_TOKEN")
+
 def call_llm(client: OpenAI, model: str, prompt: str) -> dict:
     response = client.chat.completions.create(
         model=model,
@@ -29,7 +34,7 @@ def run_task(client: OpenAI, model: str, task_id: int):
     obs = env.reset()
     done = False
     
-    print(f"Task {task_id} Start")
+    print(f"START Task {task_id}")
     
     while not done:
         if task_id == 1:
@@ -65,23 +70,13 @@ def run_task(client: OpenAI, model: str, task_id: int):
             action = TriageAction(email_id=obs.email_id, priority="low")
             
         obs, reward, done, info = env.step(action)
-        print(f"[{info['progress']}] {action.email_id} | Score: {reward.score}")
+        print(f"STEP: [{info['progress']}] {action.email_id} | Score: {reward.score}")
 
     score = env.cumulative_score / env.state()["total_emails"]
-    print(f"Task {task_id} Avg Score: {score:.3f}")
+    print(f"END Task {task_id} Avg Score: {score:.3f}")
 
 if __name__ == "__main__":
-    groq_key = os.environ.get("GROQ_API_KEY")
-    openai_key = os.environ.get("OPENAI_API_KEY")
-    
-    if groq_key:
-        client = OpenAI(api_key=groq_key, base_url="https://api.groq.com/openai/v1")
-        model_name = "llama-3.3-70b-versatile"
-    elif openai_key:
-        client = OpenAI(api_key=openai_key)
-        model_name = "gpt-3.5-turbo-1106"
-    else:
-        sys.exit(1)
+    client = OpenAI(api_key=HF_TOKEN, base_url=API_BASE_URL)
     
     for tid in [1, 2, 3]:
-        run_task(client, model_name, tid)
+        run_task(client, MODEL_NAME, tid)
