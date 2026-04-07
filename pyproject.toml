@@ -24,3 +24,6 @@ requires-python = ">=3.11"
 
 [project.urls]
 Homepage = "https://github.com/imran65545/Hackathon"
+
+[project.scripts]
+server = "server.app:app"
