@@ -1,3 +1,12 @@
+---
+title: Email Triage Environment
+emoji: 📧
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+---
+
 # 📬 Email Triage Environment (OpenEnv)
 
 A real-world AI training and evaluation environment designed to test frontier language models (and autonomous agents) on their ability to act as corporate triage operators. 

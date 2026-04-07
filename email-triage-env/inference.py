@@ -7,7 +7,8 @@ from dotenv import load_dotenv
 # Load variables from .env file
 load_dotenv()
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Add current directory to path to ensure 'env' can be imported
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from env.environment import EmailTriageEnv
 from env.models import TriageAction
