@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "email-triage-env"
+version = "1.0.0"
+description = "A real-world AI training and evaluation environment for email triage agents."
+authors = [
+    { name = " Team Ctrl Alt Elite" }
+]
+dependencies = [
+    "pydantic>=2.0.0",
+    "fastapi",
+    "uvicorn",
+    "httpx",
+    "openai",
+    "pytest",
+    "openenv",
+    "python-dotenv"
+]
+readme = "README.md"
+requires-python = ">=3.11"
+
+[project.urls]
+Homepage = "https://github.com/imran65545/Hackathon"
