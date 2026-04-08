@@ -23,7 +23,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 
 [project.urls]
-Homepage = "https://github.com/imran65545/Hackathon"
+Homepage = "https://huggingface.co/spaces/imran785/hackathon"
 
 [project.scripts]
-server = "server.app:app"
+server = "server.app:main"

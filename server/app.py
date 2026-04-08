@@ -176,3 +176,10 @@ def step_env(action: TriageAction):
 @app.get("/state")
 def get_state():
     return env.state()
+
+def main():
+    import uvicorn
+    uvicorn.run("server.app:app", host="0.0.0.0", port=8000)
+
+if __name__ == "__main__":
+    main()
