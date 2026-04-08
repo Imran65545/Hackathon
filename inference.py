@@ -39,9 +39,11 @@ def run_task(client: OpenAI, model: str, task_id: int):
     obs = env.reset()
     done = False
     
-    print(f"START Task {task_id}")
+    print(f"[START] task={task_id}", flush=True)
+    step_count = 0
     
     while not done:
+        step_count += 1
         if task_id == 1:
             instruction = "Classify priority: 'urgent', 'normal', or 'low'. Resp: {\"priority\": \"...\"}"
         elif task_id == 2:
@@ -75,10 +77,10 @@ def run_task(client: OpenAI, model: str, task_id: int):
             action = TriageAction(email_id=obs.email_id, priority="low")
             
         obs, reward, done, info = env.step(action)
-        print(f"STEP: [{info['progress']}] {action.email_id} | Score: {reward.score}")
+        print(f"[STEP] step={step_count} reward={reward.score}", flush=True)
 
     score = env.cumulative_score / env.state()["total_emails"]
-    print(f"END Task {task_id} Avg Score: {score:.3f}")
+    print(f"[END] task={task_id} score={score:.3f} steps={step_count}", flush=True)
 
 if __name__ == "__main__":
     client = OpenAI(api_key=HF_TOKEN, base_url=API_BASE_URL)
