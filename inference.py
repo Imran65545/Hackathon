@@ -80,6 +80,7 @@ def run_task(client: OpenAI, model: str, task_id: int):
         print(f"[STEP] step={step_count} reward={reward.score}", flush=True)
 
     score = env.cumulative_score / env.state()["total_emails"]
+    score = max(0.001, min(0.999, score))
     print(f"[END] task={task_id} score={score:.3f} steps={step_count}", flush=True)
 
 if __name__ == "__main__":
